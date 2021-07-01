@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class CryptoManager : MonoBehaviour
 {
     [Header("按钮")]
-    public Button CaesarBtn, HillBtn, SHA1Btn, LFSRBtn, RSABtn, DESBtn, AESBtn,DSABtn;
+    public Button CaesarBtn, HillBtn, SHA1Btn, LFSRBtn, RSABtn, DESBtn, AESBtn,DSABtn,DHBtn;
     [Header("界面")]
-    public GameObject CaesarPanel, HillPanel, SHA1Panel, LFSRPanel, RSAPanel, DESPanel, AESPanel,DSAPanel;
+    public GameObject CaesarPanel, HillPanel, SHA1Panel, LFSRPanel, RSAPanel, DESPanel, AESPanel,DSAPanel,DHPanel;
     public GameObject myself;
     // Start is called before the first frame update
     void Start()
@@ -20,6 +20,7 @@ public class CryptoManager : MonoBehaviour
         RSABtn.onClick.AddListener(RSA);
         DESBtn.onClick.AddListener(DES);
         AESBtn.onClick.AddListener(AES);
+        DHBtn.onClick.AddListener(DH);
         DSABtn.onClick.AddListener(DSA);
     }
 
@@ -62,6 +63,12 @@ public class CryptoManager : MonoBehaviour
     void AES()
     {
         AESPanel.SetActive(true);
+        myself.SetActive(false);
+    }
+
+    void DH()
+    {
+        DHPanel.SetActive(true);
         myself.SetActive(false);
     }
 

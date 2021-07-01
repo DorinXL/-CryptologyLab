@@ -119,7 +119,7 @@ public class DSA : MonoBehaviour
         }
     }
 
-    private static bool YesOrNo(string encData, string decData)
+    public static bool YesOrNo(string encData, string decData)
     {
         if (encData.Equals(decData))
             return true;
